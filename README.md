@@ -20,7 +20,6 @@
 - [Usage](#-usage)
 - [Output Examples](#-output-examples)
 - [Roadmap](#-roadmap)
-- [License](#-license)
 
 ---
 
@@ -95,8 +94,17 @@ The system uses the **Google Agent Development Kit (ADK)** to orchestrate a "Rel
 
 ### 1. Build the Pipeline
 Initialize the agents and tools using the builder function. This ensures a fresh state for every run.
-
-```python
+```
+python
 # Initialize the pipeline
 root_agent = build_manga_pipeline()
 runner = InMemoryRunner(agent=root_agent)
+```
+## roadmap
+
+🔮 Roadmap (Future Improvements)
+[ ] Character Consistency (LoRA): Train a temporary LoRA adapter on the fly so the character's face remains identical in every panel.
+
+[ ] Speech Bubbles: Use OCR/Vision models to detect empty space in the artwork and inject real speech bubbles instead of captions.
+
+[ ] Dynamic Layouts: Implement a "Layout Agent" that decides if a scene deserves a full "Splash Page" or a smaller panel based on dramatic intensity.
